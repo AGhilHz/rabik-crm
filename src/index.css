@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 90% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 90% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 90% 12%;
+
+    --primary: 220 90% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 90% 12%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 90% 32%;
+
+    --radius: 0.75rem;
+    
+    /* Custom Rabik colors */
+    --rabik-dark-blue: 220 90% 32%;
+    --rabik-light-blue: 217 91% 60%;
+    --rabik-gold: 45 93% 58%;
+    --rabik-bg-light: 220 14% 98%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 32%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 32% / 0.95) 0%, hsl(217 91% 60% / 0.95) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 24px hsl(220 90% 32% / 0.08);
+    --shadow-elevated: 0 8px 40px hsl(220 90% 32% / 0.12);
+    --shadow-glow: 0 0 40px hsl(45 93% 58% / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 90% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 50% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 220 50% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 50% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 50% 18%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 90% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 50% 18%;
+    --input: 220 50% 18%;
+    --ring: 217 91% 60%;
+    
+    /* Dark mode custom */
+    --rabik-bg-light: 220 50% 10%;
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 40%) 0%, hsl(217 91% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 90% 12% / 0.98) 0%, hsl(217 91% 20% / 0.98) 100%);
+    --shadow-soft: 0 4px 24px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 8px 40px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-vazir;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  
+  [lang="en"] {
+    @apply font-inter;
+  }
+}
+
+@layer utilities {
+  .font-vazir {
+    font-family: 'Vazirmatn', sans-serif;
+  }
+  
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .glass {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+}
