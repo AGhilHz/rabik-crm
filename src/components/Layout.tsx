@@ -82,12 +82,16 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-smooth group">
+            <Link to="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <img src="/logo.svg" alt="رابیک" className="h-10 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 bg-primary/20 blur-xl group-hover:bg-primary/40 transition-smooth" />
+                <div className="absolute inset-0 bg-gradient-secondary blur-xl opacity-40 group-hover:opacity-60 transition-smooth"></div>
+                <img 
+                  src="/logo.png" 
+                  alt="رابیک" 
+                  className="relative h-12 w-12 object-contain drop-shadow-lg group-hover:scale-110 transition-transform" 
+                />
               </div>
-              <span className="text-xl font-bold text-gradient hidden sm:block">رابیک</span>
+              <span className="text-2xl font-bold text-primary hidden sm:block">رابیک</span>
             </Link>
 
             {/* Desktop Menu */}
@@ -211,7 +215,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             {/* About */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <img src="/logo.svg" alt="رابیک" className="h-10 brightness-0 invert" />
+                <img src="/logo.png" alt="رابیک" className="h-12 w-12 object-contain brightness-0 invert" />
                 <span className="text-2xl font-bold">رابیک</span>
               </div>
               <p className="text-sm opacity-90 leading-relaxed">
