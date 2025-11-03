@@ -13,23 +13,28 @@ interface ServiceCardProps {
 
 export const ServiceCard = ({ icon: Icon, title, description, price, link }: ServiceCardProps) => {
   return (
-    <Card className="shadow-soft hover:shadow-elevated transition-smooth group">
+    <Card className="gradient-card shadow-soft hover:shadow-elevated transition-smooth hover-lift card-shine group border-2 border-transparent hover:border-primary/20 rounded-3xl overflow-hidden">
       <CardHeader>
-        <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-smooth">
-          <Icon className="h-6 w-6 text-primary" />
+        <div className="relative w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-bounce shadow-glow">
+          <Icon className="h-8 w-8 text-white" />
+          <div className="absolute inset-0 bg-white/20 rounded-2xl blur group-hover:blur-xl transition-smooth" />
         </div>
-        <CardTitle className="text-xl">{title}</CardTitle>
+        <CardTitle className="text-2xl font-bold">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
         {price && (
-          <p className="text-sm text-accent font-semibold mt-4">{price}</p>
+          <div className="mt-6 p-4 rounded-2xl bg-accent/10 border border-accent/20">
+            <p className="text-accent font-bold text-lg">{price}</p>
+          </div>
         )}
       </CardContent>
       {link && (
         <CardFooter>
           <Link to={link} className="w-full">
-            <Button variant="outline" className="w-full">جزئیات بیشتر</Button>
+            <Button variant="outline" className="w-full rounded-xl hover:bg-primary hover:text-primary-foreground transition-smooth">
+              جزئیات بیشتر
+            </Button>
           </Link>
         </CardFooter>
       )}
