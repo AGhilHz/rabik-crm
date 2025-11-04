@@ -97,11 +97,11 @@ const Auth = () => {
           <div className="max-w-md mx-auto">
             <Tabs defaultValue="login" className="w-full">
               <TabsList className="grid w-full grid-cols-2 mb-8 p-1 rounded-2xl glass-strong">
-                <TabsTrigger value="login" className="rounded-xl data-[state=active]:gradient-primary data-[state=active]:text-white">
+                <TabsTrigger value="login" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                   <LogIn className="h-4 w-4 ml-2" />
                   ورود
                 </TabsTrigger>
-                <TabsTrigger value="signup" className="rounded-xl data-[state=active]:gradient-primary data-[state=active]:text-white">
+                <TabsTrigger value="signup" className="rounded-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                   <UserPlus className="h-4 w-4 ml-2" />
                   ثبت‌نام
                 </TabsTrigger>
@@ -142,7 +142,7 @@ const Auth = () => {
                       <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full gradient-primary hover-lift rounded-xl h-12 text-lg"
+                        className="w-full hover-lift rounded-xl h-12 text-lg"
                       >
                         {loading ? (
                           <>
@@ -208,7 +208,7 @@ const Auth = () => {
                       <Button
                         type="submit"
                         disabled={loading}
-                        className="w-full gradient-primary hover-lift rounded-xl h-12 text-lg"
+                        className="w-full hover-lift rounded-xl h-12 text-lg"
                       >
                         {loading ? (
                           <>

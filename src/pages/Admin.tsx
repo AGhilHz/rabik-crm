@@ -15,9 +15,13 @@ import {
   HelpCircle, 
   Mail,
   Loader2,
-  Shield,
-  TrendingUp
+  Shield
 } from "lucide-react";
+import { BlogManager } from "@/components/admin/BlogManager";
+import { PortfolioManager } from "@/components/admin/PortfolioManager";
+import { ServicesManager } from "@/components/admin/ServicesManager";
+import { FAQManager } from "@/components/admin/FAQManager";
+import { ContactManager } from "@/components/admin/ContactManager";
 
 const Admin = () => {
   const navigate = useNavigate();
@@ -209,68 +213,23 @@ const Admin = () => {
                 </TabsList>
 
                 <TabsContent value="blog" className="space-y-4">
-                  <div className="text-center py-12">
-                    <TrendingUp className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">مدیریت مقالات</h3>
-                    <p className="text-muted-foreground mb-6">
-                      بخش مدیریت مقالات وبلاگ به زودی آماده می‌شود
-                    </p>
-                    <Button className="gradient-primary rounded-xl">
-                      افزودن مقاله جدید
-                    </Button>
-                  </div>
+                  <BlogManager />
                 </TabsContent>
 
                 <TabsContent value="portfolio" className="space-y-4">
-                  <div className="text-center py-12">
-                    <Briefcase className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">مدیریت نمونه کارها</h3>
-                    <p className="text-muted-foreground mb-6">
-                      بخش مدیریت نمونه کارها به زودی آماده می‌شود
-                    </p>
-                    <Button className="gradient-primary rounded-xl">
-                      افزودن نمونه کار
-                    </Button>
-                  </div>
+                  <PortfolioManager />
                 </TabsContent>
 
                 <TabsContent value="services" className="space-y-4">
-                  <div className="text-center py-12">
-                    <Wrench className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">مدیریت خدمات</h3>
-                    <p className="text-muted-foreground mb-6">
-                      بخش مدیریت خدمات به زودی آماده می‌شود
-                    </p>
-                    <Button className="gradient-primary rounded-xl">
-                      افزودن خدمت جدید
-                    </Button>
-                  </div>
+                  <ServicesManager />
                 </TabsContent>
 
                 <TabsContent value="faq" className="space-y-4">
-                  <div className="text-center py-12">
-                    <HelpCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">مدیریت سوالات متداول</h3>
-                    <p className="text-muted-foreground mb-6">
-                      بخش مدیریت سوالات متداول به زودی آماده می‌شود
-                    </p>
-                    <Button className="gradient-primary rounded-xl">
-                      افزودن سوال
-                    </Button>
-                  </div>
+                  <FAQManager />
                 </TabsContent>
 
                 <TabsContent value="contacts" className="space-y-4">
-                  <div className="text-center py-12">
-                    <Mail className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-2">مشاهده پیام‌های تماس</h3>
-                    <p className="text-muted-foreground mb-6">
-                      بخش مشاهده پیام‌های تماس به زودی آماده می‌شود
-                    </p>
-                    <Button className="gradient-primary rounded-xl">
-                      مشاهده پیام‌ها
-                    </Button>
-                  </div>
+                  <ContactManager />
                 </TabsContent>
               </Tabs>
             </CardContent>

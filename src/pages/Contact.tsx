@@ -94,7 +94,7 @@ const Contact = () => {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full gradient-primary"
+                    className="w-full"
                     size="lg"
                     disabled={isSubmitting}
                   >

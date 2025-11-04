@@ -1,5 +1,6 @@
 import { Layout } from "@/components/Layout";
 import { BlogCard } from "@/components/BlogCard";
+import { Button } from "@/components/ui/button";
 import seoImage from "@/assets/blog-seo.jpg";
 import crmImage from "@/assets/blog-crm.jpg";
 import marketingImage from "@/assets/blog-marketing.jpg";
@@ -64,9 +65,9 @@ const Blog = () => {
                 placeholder="ایمیل شما"
                 className="flex-1 px-4 py-2 rounded-lg border border-input bg-background"
               />
-              <button className="px-6 py-2 rounded-lg gradient-primary text-white font-semibold">
+              <Button className="px-6 py-2 rounded-lg font-semibold">
                 عضویت
-              </button>
+              </Button>
             </div>
           </div>
         </div>

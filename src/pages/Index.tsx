@@ -79,7 +79,7 @@ const Index = () => {
 
           <div className="text-center mt-8">
             <Link to="/services">
-              <Button size="lg" className="gradient-primary">مشاهده همه خدمات</Button>
+              <Button size="lg">مشاهده همه خدمات</Button>
             </Link>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Index = () => {
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
               />
-              <Button type="submit" className="w-full gradient-primary" size="lg">
+              <Button type="submit" className="w-full" size="lg">
                 ارسال درخواست
               </Button>
             </form>
