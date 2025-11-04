@@ -15,9 +15,8 @@ export const ServiceCard = ({ icon: Icon, title, description, price, link }: Ser
   return (
     <Card className="gradient-card shadow-soft hover:shadow-elevated transition-smooth hover-lift card-shine group border-2 border-transparent hover:border-primary/20 rounded-3xl overflow-hidden">
       <CardHeader>
-        <div className="relative w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-bounce shadow-glow">
-          <Icon className="h-8 w-8 text-white" />
-          <div className="absolute inset-0 bg-white/20 rounded-2xl blur group-hover:blur-xl transition-smooth" />
+        <div className="relative w-16 h-16 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-primary/40 transition-bounce">
+          <Icon className="h-8 w-8 text-primary" />
         </div>
         <CardTitle className="text-2xl font-bold">{title}</CardTitle>
       </CardHeader>

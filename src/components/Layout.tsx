@@ -137,7 +137,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
               
               {user ? (
                 <Link to="/admin" className="hidden md:block">
-                  <Button className="gradient-primary hover-lift rounded-xl">
+                  <Button className="rounded-xl">
                     <Shield className="h-4 w-4 ml-2" />
                     پنل کاربری
                   </Button>
@@ -148,7 +148,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                     <Button variant="ghost" className="rounded-xl">ورود</Button>
                   </Link>
                   <Link to="/contact" className="hidden md:block">
-                    <Button className="gradient-primary hover-lift rounded-xl">شروع همکاری</Button>
+                    <Button className="rounded-xl">شروع همکاری</Button>
                   </Link>
                 </>
               )}
@@ -175,7 +175,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                     to={item.path}
                     className={`px-4 py-3 rounded-xl transition-smooth ${
                       location.pathname === item.path
-                        ? "bg-gradient-primary text-primary-foreground shadow-soft"
+                        ? "bg-primary text-primary-foreground shadow-soft"
                         : "hover:bg-muted"
                     }`}
                   >
@@ -194,7 +194,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
                       <Button variant="outline" className="w-full rounded-xl">ورود</Button>
                     </Link>
                     <Link to="/contact" className="px-4">
-                      <Button className="w-full gradient-primary rounded-xl">شروع همکاری</Button>
+                      <Button className="w-full rounded-xl">شروع همکاری</Button>
                     </Link>
                   </>
                 )}
@@ -208,45 +208,44 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <main className="flex-1">{children}</main>
 
       {/* Footer */}
-      <footer className="relative overflow-hidden bg-gradient-primary text-primary-foreground mt-20">
-        <div className="absolute inset-0 gradient-mesh opacity-20" />
-        <div className="container mx-auto px-4 py-16 relative z-10">
+      <footer className="bg-card border-t border-border mt-20">
+        <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* About */}
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <img src="/logo.png" alt="رابیک" className="h-12 w-12 object-contain brightness-0 invert" />
-                <span className="text-2xl font-bold">رابیک</span>
+                <img src="/logo.png" alt="رابیک" className="h-12 w-12 object-contain" />
+                <span className="text-2xl font-bold text-foreground">رابیک</span>
               </div>
-              <p className="text-sm opacity-90 leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 ارتباط بی‌نهایت با مشتری
               </p>
-              <p className="text-xs opacity-75 leading-relaxed">
+              <p className="text-xs text-muted-foreground leading-relaxed">
                 طراحی هوشمند وب، رشد پایدار کسب‌وکار شما
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
-              <h3 className="font-semibold mb-6 text-lg">دسترسی سریع</h3>
-              <ul className="space-y-3 text-sm opacity-90">
+              <h3 className="font-semibold mb-6 text-lg text-foreground">دسترسی سریع</h3>
+              <ul className="space-y-3 text-sm">
                 <li>
-                  <Link to="/services" className="hover:text-accent transition-smooth hover:translate-x-1 inline-block">
+                  <Link to="/services" className="text-muted-foreground hover:text-primary transition-smooth hover:translate-x-1 inline-block">
                     خدمات
                   </Link>
                 </li>
                 <li>
-                  <Link to="/portfolio" className="hover:text-accent transition-smooth hover:translate-x-1 inline-block">
+                  <Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-smooth hover:translate-x-1 inline-block">
                     نمونه کارها
                   </Link>
                 </li>
                 <li>
-                  <Link to="/blog" className="hover:text-accent transition-smooth hover:translate-x-1 inline-block">
+                  <Link to="/blog" className="text-muted-foreground hover:text-primary transition-smooth hover:translate-x-1 inline-block">
                     وبلاگ
                   </Link>
                 </li>
                 <li>
-                  <Link to="/faq" className="hover:text-accent transition-smooth hover:translate-x-1 inline-block">
+                  <Link to="/faq" className="text-muted-foreground hover:text-primary transition-smooth hover:translate-x-1 inline-block">
                     سوالات متداول
                   </Link>
                 </li>
@@ -255,8 +254,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Services */}
             <div>
-              <h3 className="font-semibold mb-6 text-lg">خدمات</h3>
-              <ul className="space-y-3 text-sm opacity-90">
+              <h3 className="font-semibold mb-6 text-lg text-foreground">خدمات</h3>
+              <ul className="space-y-3 text-sm text-muted-foreground">
                 <li>طراحی وب‌سایت</li>
                 <li>بهینه‌سازی سئو</li>
                 <li>پیاده‌سازی CRM</li>
@@ -266,20 +265,20 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Contact */}
             <div>
-              <h3 className="font-semibold mb-6 text-lg">تماس با ما</h3>
-              <ul className="space-y-3 text-sm opacity-90">
+              <h3 className="font-semibold mb-6 text-lg text-foreground">تماس با ما</h3>
+              <ul className="space-y-3 text-sm">
                 <li>
-                  <a href="mailto:info@rabik.ir" className="hover:text-accent transition-smooth">
+                  <a href="mailto:info@rabik.ir" className="text-muted-foreground hover:text-primary transition-smooth">
                     info@rabik.ir
                   </a>
                 </li>
                 <li>
-                  <a href="https://t.me/rabik_ir" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">
+                  <a href="https://t.me/rabik_ir" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                     تلگرام: @rabik_ir
                   </a>
                 </li>
                 <li>
-                  <a href="https://instagram.com/rabik.ir" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-smooth">
+                  <a href="https://instagram.com/rabik.ir" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-smooth">
                     اینستاگرام: @rabik.ir
                   </a>
                 </li>
@@ -287,7 +286,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
 
-          <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-sm opacity-75">
+          <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
             <p>© ۱۴۰۴ رابیک. تمامی حقوق محفوظ است.</p>
           </div>
         </div>
@@ -297,7 +296,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 left-8 z-40 p-4 rounded-2xl gradient-primary text-primary-foreground shadow-glow hover-lift animate-fade-in"
+          className="fixed bottom-8 left-8 z-40 p-4 rounded-2xl bg-primary text-primary-foreground shadow-elevated hover:scale-110 transition-bounce animate-fade-in"
           aria-label="بازگشت به بالا"
         >
           <ChevronUp className="h-6 w-6" />
