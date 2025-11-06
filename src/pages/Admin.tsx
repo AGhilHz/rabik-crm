@@ -15,8 +15,13 @@ import {
   HelpCircle, 
   Mail,
   Loader2,
-  Shield
+  Shield,
+  Users,
+  ArrowLeft,
+  Receipt,
+  MessageSquare
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { BlogManager } from "@/components/admin/BlogManager";
 import { PortfolioManager } from "@/components/admin/PortfolioManager";
 import { ServicesManager } from "@/components/admin/ServicesManager";
@@ -136,6 +141,66 @@ const Admin = () => {
               <LogOut className="h-4 w-4 ml-2" />
               خروج
             </Button>
+          </div>
+
+          {/* Quick Links */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <Link to="/admin/customers">
+              <Card className="gradient-card hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3">
+                    <Users className="h-8 w-8 text-primary" />
+                    <div>
+                      <h3 className="font-bold">مدیریت مشتریان</h3>
+                      <p className="text-sm text-muted-foreground">CRM سیستم</p>
+                    </div>
+                    <ArrowLeft className="h-5 w-5 mr-auto text-muted-foreground" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/admin/projects">
+              <Card className="gradient-card hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3">
+                    <Briefcase className="h-8 w-8 text-secondary" />
+                    <div>
+                      <h3 className="font-bold">مدیریت پروژهها</h3>
+                      <p className="text-sm text-muted-foreground">Kanban Board</p>
+                    </div>
+                    <ArrowLeft className="h-5 w-5 mr-auto text-muted-foreground" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/admin/invoices">
+              <Card className="gradient-card hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3">
+                    <Receipt className="h-8 w-8 text-accent" />
+                    <div>
+                      <h3 className="font-bold">مدیریت فاکتورها</h3>
+                      <p className="text-sm text-muted-foreground">فاکتور و پرداخت</p>
+                    </div>
+                    <ArrowLeft className="h-5 w-5 mr-auto text-muted-foreground" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/admin/tickets">
+              <Card className="gradient-card hover:shadow-lg transition-all cursor-pointer">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-3">
+                    <MessageSquare className="h-8 w-8 text-success" />
+                    <div>
+                      <h3 className="font-bold">مدیریت تیکتها</h3>
+                      <p className="text-sm text-muted-foreground">پشتیبانی</p>
+                    </div>
+                    <ArrowLeft className="h-5 w-5 mr-auto text-muted-foreground" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
 
           {/* Stats Grid */}
